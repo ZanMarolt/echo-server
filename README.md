@@ -1,4 +1,4 @@
-# Mock server
+# Echo server
 
 ## Setup
 
@@ -34,7 +34,7 @@ Saving the data
 
 ```sh
 curl -X POST \
-  http://localhost:3288/test \
+  http://localhost:3333/test \
   -H 'Authorization: my-supersafe-token' \
   -H 'Content-Type: application/json' \
   -H 'Host: localhost:3333' \
