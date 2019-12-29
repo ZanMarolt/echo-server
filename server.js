@@ -35,7 +35,7 @@ startRouter = () => {
 		try {
 			await fs.writeFile(getFilePath(route), JSON.stringify(req.body));
 			res.status(200).send('Your data is saved for now.');
-		} catch {
+		} catch (e) {
 			res.status(404).send('Could not save data');
 		}
 	});
@@ -45,7 +45,7 @@ startRouter = () => {
 		try {
 			const content = await fs.readFile(getFilePath(route), 'utf8');
 			res.status(200).send(JSON.parse(content));
-		} catch {
+		} catch (e) {
 			res.status(404).send('Wrong endpoint, no data yet');
 		}
 		
